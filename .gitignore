@@ -2,10 +2,10 @@
 *
 
 # But not these files...
-!.gitignore
-!.vimrc
-!.bash_profile
-!.bash_colors
+!gitignore
+!vimrc
+!bash_profile
+!bash_colors
 !makesymlinks.sh
 # etc...
 
