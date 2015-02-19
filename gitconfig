@@ -1,0 +1,30 @@
+[user]
+        name = Simon
+	email = simonfh@users.noreply.github.com
+
+[alias]
+  a       = add -u
+  aa      = add --all :/
+  ap      = add -u -p
+  b       = browse
+  bam     = "!source ~/.githelpers && delete_local_merged_branches"
+  bamr    = "!source ~/.githelpers && delete_remote_merged_branches"
+  c       = commit -v
+  co      = checkout
+  d       = diff
+  ds      = diff --staged
+  dw      = diff --color-words
+  po      = push origin head
+  pr      = "!f() { git fetch origin refs/pull/$1/head:pr/$1 && git co pr/$1; } ; f"
+  s       = status -s -b
+  sm      = submodule
+  smu     = submodule foreach git pull origin master
+  summary = "!source ~/.githelpers && weekly_summary"
+  td      = merge --no-ff
+  up      = "!git fetch upstream && git rebase upstream/master"
+  w       = whatchanged --decorate
+  wp      = whatchanged --decorate -p
+  wtf     = "!git fetch --multiple production origin && git log production/master..origin/master"
+  l = log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short
+[core]
+        editor = vim
