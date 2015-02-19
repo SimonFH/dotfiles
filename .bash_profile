@@ -37,7 +37,7 @@ if [ $? -eq 0 ]; then \
   else \
     # @5 - Changes to working tree
     echo "'$IRed'"$(__git_ps1 " {%s}"); \
-  fi) '$Blue$PathShort$LightGrey'\$ "; \
+  fi) '$Blue$PathShort$LightGrey'\$'$Color_Off' "; \
 else \
   # @2 - Prompt when not in GIT repo
   echo "'$Blue$PathShort$LightGrey'\$'$Color_Off' "; \
@@ -97,7 +97,7 @@ lsed2() {
     fi
 }
 
-#needs work
+#converts chars to hex
 toHex() {
     if [ $# -eq 1 ]
     then
