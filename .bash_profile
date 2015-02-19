@@ -101,6 +101,7 @@ lsed2() {
 toHex() {
     if [ $# -eq 1 ]
     then
-        echo $1|hexdump|sed ''s/" "/\\\\x/g''|sed ''s/x\\\\//g''
+        #echo $1|hexdump|sed ''s/" "/\\\\x/g''|sed ''s/x\\\\//g''
+        printf $1|hexdump|perl -ne 'while(/\s+\S\S/g){print "\\x$&";}'|sed  ''s/" "//g''|head -n 1
     fi
 }
