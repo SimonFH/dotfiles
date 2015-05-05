@@ -8,6 +8,7 @@
 !bash_colors
 !makesymlinks.sh
 !gitconfig
+!bashrc
 # etc...
 
 # ...even if they are in subdirectories

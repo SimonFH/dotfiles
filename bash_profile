@@ -1,3 +1,12 @@
+# not used yet
+#platform='unknown'
+#unamestr=`uname`
+#if [[ "$unamestr" == 'Linux' ]]; then
+#   platform='linux'
+#elif [[ "$unamestr" == 'Darwin' ]]; then
+#   platform='osx'
+#fi
+
 # LS STUFF
 alias dir='ls -alv'
 alias ls='ls -GF'

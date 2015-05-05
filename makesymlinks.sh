@@ -8,7 +8,11 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bash_profile bash_colors vimrc gitconfig"    # list of files/folders to symlink in homedir
+if [[ $platform == 'linux' ]]; then
+    files="bashrc bash_colors vimrc gitconfig"    # list of files/folders to symlink in homedir
+elif [[ $platform == 'osx' ]]; then
+    files="bash_profile bash_colors vimrc gitconfig"    # list of files/folders to symlink in homedir
+fi
 
 ##########
 
@@ -29,3 +33,5 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+
