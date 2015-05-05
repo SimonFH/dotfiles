@@ -1,6 +1,6 @@
 [user]
-        name = Simon
-	email = simonfh@users.noreply.github.com
+  name    = Simon
+  email   = simonfh@users.noreply.github.com
 
 [alias]
   a       = add -u
@@ -26,5 +26,6 @@
   wp      = whatchanged --decorate -p
   wtf     = "!git fetch --multiple production origin && git log production/master..origin/master"
   l = log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short
+
 [core]
-        editor = vim
+  editor  = vim
