@@ -8,6 +8,14 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
+platform='unknown'
+unamestr=$(uname)
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='osx'
+fi
+
 if [[ $platform == 'linux' ]]; then
     files="bashrc bash_colors vimrc gitconfig"    # list of files/folders to symlink in homedir
 elif [[ $platform == 'osx' ]]; then
