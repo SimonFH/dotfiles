@@ -20,7 +20,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'altercation/vim-colors-solarized'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tomasr/molokai'
@@ -232,3 +232,6 @@ nmap s <Plug>(easymotion-s2)
 
 " Turn on case sensitive feature
 let g:EasyMotion_smartcase = 1
+
+" crontab
+autocmd filetype crontab setlocal nobackup nowritebackup

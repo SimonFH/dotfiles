@@ -18,8 +18,9 @@ alias lh='ll -h'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
 alias lsusb='system_profiler SPUSBDataType'
 
+export EDITOR='vim'
 alias vi='vim'
-#alias less="/usr//share/vim/vim73/macros/less.sh -R -c -"
+alias less="/usr//share/vim/vim73/macros/less.sh -R -c -"
 
 # export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 
@@ -114,3 +115,6 @@ toHex() {
         printf $1|hexdump|perl -ne 'while(/\s+\S\S/g){print "\\x$&";}'|sed  ''s/" "//g''|head -n 1
     fi
 }
+
+#let vi open vim, when alias is not enough 
+#sudo ln -s `which vim` /usr/local/bin/vi
