@@ -18,13 +18,15 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-theme'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'leafgarland/typescript-vim'
 
 
 

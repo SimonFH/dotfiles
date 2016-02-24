@@ -15,7 +15,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'Lokaltog/powerline'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
@@ -24,6 +26,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tomasr/molokai'
+Plugin 'leafgarland/typescript-vim'
 
 
 " All of your Plugins must be added before the following line
@@ -90,7 +93,9 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 set t_Co=256
 let g:airline_powerline_fonts=1
-let g:airline_theme='simple'
+"let g:airline_theme='simple'
+let g:airline_theme='lucius'
+"let g:airline_theme='solarized'
 "let g:airline_theme='bubblegum'
 
 "-----
