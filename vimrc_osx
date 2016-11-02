@@ -240,3 +240,6 @@ let g:EasyMotion_smartcase = 1
 
 " crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
+
+
+set clipboard=unnamed

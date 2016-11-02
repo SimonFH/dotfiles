@@ -20,7 +20,7 @@ alias lsusb='system_profiler SPUSBDataType'
 
 export EDITOR='vim'
 alias vi='vim'
-alias less="/usr//share/vim/vim73/macros/less.sh -R -c -"
+alias less="/usr//share/vim/vim74/macros/less.sh -R -c -"
 
 # export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 
@@ -77,7 +77,7 @@ man() {
   /usr/bin/man $* | \
     col -b | \
     #vim -R -c 'set ft=man nomod nolist' -
-    /usr//share/vim/vim73/macros/less.sh -R -c 'set ft=man nomod nolist' -
+    /usr/share/vim/vim74/macros/less.sh -R -c 'set ft=man nomod nolist' -
 }
 
 
@@ -118,3 +118,9 @@ toHex() {
 
 #let vi open vim, when alias is not enough 
 #sudo ln -s `which vim` /usr/local/bin/vi
+export PATH="/usr/local/sbin:$PATH"
+
+
+#fix random locale error in python/matplot lib. #import locale / locale.getdefaultlocale()
+#otherwise uncheck "set locale.." in the Terminal settings
+#export LANG=en_US.UTF-8
