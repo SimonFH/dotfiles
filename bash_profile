@@ -10,10 +10,11 @@
 # LS STUFF
 alias dir='ls -alv'
 alias ls='ls -GF'
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
-alias lh='ll -h'
+#alias lh='ll -h'
+alias lsdu='ls|xargs -I % du -s -m -h %'
 
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
 alias lsusb='system_profiler SPUSBDataType'
