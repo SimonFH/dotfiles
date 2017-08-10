@@ -7,6 +7,11 @@
 #   platform='osx'
 #fi
 
+# COWSAY
+if [ -x /usr/local/bin/cowsay -a -x /usr/local/bin/fortune ]; then
+   fortune | cowsay -f $(ls /usr/local/Cellar/cowsay/3.04/share/cows/|grep .cow|perl -MList::Util=shuffle -e 'print shuffle <>'|head -n1)
+fi
+
 # LS STUFF
 alias dir='ls -alv'
 alias ls='ls -GF'
@@ -74,12 +79,12 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 ## rbenv stuff
 #eval "$(rbenv init -)"
 
-man() {
-  /usr/bin/man $* | \
-    col -b | \
-    #vim -R -c 'set ft=man nomod nolist' -
-    /usr/share/vim/vim74/macros/less.sh -R -c 'set ft=man nomod nolist' -
-}
+#man() {
+#  /usr/bin/man $* | \
+#    col -b | \
+#    #vim -R -c 'set ft=man nomod nolist' -
+#    /usr/share/vim/vim74/macros/less.sh -R -c 'set ft=man nomod nolist' -
+#}
 
 
 
