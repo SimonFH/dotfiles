@@ -45,7 +45,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax on
-filetype plugin indent on
 set cul
 "hi CursorLine term=none cterm=none ctermbg=0
 hi CursorLine term=none cterm=none ctermbg=none
