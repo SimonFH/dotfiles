@@ -9,6 +9,7 @@
 !makesymlinks.sh
 !gitconfig
 !bashrc
+!zshrc
 # etc...
 
 # ...even if they are in subdirectories
