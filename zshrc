@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+#for some brew installed apps
+export PATH="/usr/local/sbin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/user/.oh-my-zsh"
 
@@ -85,7 +88,8 @@ export LC_ALL=da_DK.UTF-8
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='mvim'
+   #export EDITOR='mvim'
+   export EDITOR='vim'
  fi
 
 # Compilation flags
@@ -133,7 +137,23 @@ toHex() {
     fi
 }
 
+# Colorized man pages
+man() {
+    env \
+    LESS_TERMCAP_mb="$(printf "\e[1;31m")" \
+    LESS_TERMCAP_md="$(printf "\e[1;31m")" \
+    LESS_TERMCAP_me="$(printf "\e[0m")" \
+    LESS_TERMCAP_se="$(printf "\e[0m")" \
+    LESS_TERMCAP_so="$(printf "\e[1;44;33m")" \
+    LESS_TERMCAP_ue="$(printf "\e[0m")" \
+    LESS_TERMCAP_us="$(printf "\e[1;32m")" \
+    man "${@}"
+}
+
 
 # Add this to agnoster theme to not show  hostname on local machine 
 # ~/.oh-my-zsh/themes/agnoster.zsh-theme
 # prompt_context(){}
+
+# make ctrl+u behave like in bash
+bindkey \^U backward-kill-line
